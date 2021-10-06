@@ -48,10 +48,13 @@ module.exports = {
           const timeRegex = /^(.*?)T(.*?)(\..*)$/;
           const timeFields = (new Date()).toISOString().match(timeRegex);
 
-          data['Date Submitted'] = timeFields[1];
-          data['Time Submitted'] = timeFields[2];
+          const dateColumn = self.options.dateColumnLabel || 'Date Submitted';
+          const timeColumn = self.options.timeColumnLabel || 'Time Submitted';
 
-          await self.emit('beforeSubmit', req, form, data);
+          data[dateColumn] = timeFields[1];
+          data[timeColumn] = timeFields[2];
+
+          await self.emit('beforeGoogleSheetSubmit', req, form, data);
 
           if (!form.googleSheetName) {
             try {
