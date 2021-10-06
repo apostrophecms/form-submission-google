@@ -51,7 +51,7 @@ Please note that you must not add any empty, unlabeled columns to the spreadshee
 
 ### Note on dates and times
 
-"Date Submitted" and "Time Submitted" columns are included in the Google spreadsheet automatically. These are always in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+"Date Submitted" and "Time Submitted" columns are included in the Google spreadsheet automatically. These are always in [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). For best results, format the Google spreadsheet columns as plain text.
 
 You can rename these by setting options on the `@apostrophecms/form` module. The column label should be set before the form is in use to keep all date/time data in the same column.
 

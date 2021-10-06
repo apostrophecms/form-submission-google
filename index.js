@@ -1,6 +1,7 @@
 const { google } = require('googleapis');
 const fs = require('fs');
 const has = require('lodash.has');
+const { klona } = require('klona');
 
 module.exports = {
   improve: '@apostrophecms/form',
@@ -40,11 +41,11 @@ module.exports = {
   },
   methods (self) {
     return {
-      async sendToGoogle(req, form, data) {
+      async sendToGoogle(req, form, formData) {
         if (form.googleSheetSubmissions === true) {
-          // Don't modify the original, this would frustrate
-          // other custom submission handlers
-          data = Object.assign({}, data);
+          // Don't modify the original, this would frustrate other custom
+          // submission handlers
+          const data = klona(formData);
           const timeRegex = /^(.*?)T(.*?)(\..*)$/;
           const timeFields = (new Date()).toISOString().match(timeRegex);
 
@@ -98,7 +99,8 @@ module.exports = {
             return null;
           }
 
-          // Rework form submission data to match headers. If no column exists for a form value, add it.
+          // Rework form submission data to match headers. If no column exists
+          // for a form value, add it.
           const liveColumns = [ ...header ];
           const newRow = [];
 
@@ -131,7 +133,8 @@ module.exports = {
           data[key] = data[key].join(',');
         }
 
-        data[key] = typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key]);
+        data[key] = typeof data[key] === 'string' ? data[key]
+          : JSON.stringify(data[key]);
       },
       async getFirstSheet (spreadsheetId) {
         const spreadsheet = await self.sheets.spreadsheets.get({
