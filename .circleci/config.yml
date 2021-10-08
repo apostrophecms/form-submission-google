@@ -68,5 +68,5 @@ workflows:
   build:
     jobs:
       - build-node14-mongo5
-      - build-node14-mongo4
+      - build-node14-mongo44
       - build-node12
