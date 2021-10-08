@@ -88,7 +88,7 @@ module.exports = {
           try {
             header = await self.getHeaderRow(target);
           } catch (err) {
-            self.apos.util.error('⚠️ apostrophe-forms Google Sheets submission error: ', err);
+            self.apos.util.error('⚠️ @apostrophecms/form Google Sheets submission error: ', err);
 
             if (req.user) {
               self.apos.notify(req, 'aposForms:googleSheetSubmissionError', {

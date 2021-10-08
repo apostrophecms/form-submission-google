@@ -15,7 +15,7 @@ npm install @apostrophecms/form-submission-google
 
 ### Initialization
 
-Add this module along with the other Apostrophe Form widgets in `app.js` to instantiate it.
+Add this module along with the other Apostrophe Form modules in `app.js` to instantiate it.
 
 ```javascript
 require('apostrophe')({
@@ -34,7 +34,7 @@ require('apostrophe')({
 1. **Create a project in [the Google Cloud Platform API console](https://console.developers.google.com/apis/dashboard).** Enable the Google Sheets API on the project in the API Library.
 2. **Create an [API service account](https://cloud.google.com/iam/docs/service-accounts)** in the Google API Console service.
 3. **Save the credentials JSON file** provided with the new service account. *You may not be able to download this again.*
-4. **Add the credentials file to the `modules/apostrophe-forms` directory in your Apostrophe project as `credentials.json`.**
+4. **Add the credentials file to the `modules/@apostrophecms/form` directory in your Apostrophe project as `credentials.json`.**
   - Note: We do not recommend committing this file to version control if your code is public. You should add it to the `.gitignore` file (for Git) and put it directly on your production server. *Alternately* you can provide the credentials as JSON in an environment variable named `GOOGLE_APPLICATION_CREDENTIALS`.
 5. **Copy the service account email address.** You will need to add this as an "Edit"-level user on your Google spreadsheet as you would a human editor.
 6. **Plan for the service account credentials to expire in 10 years.** The service account credentials have a long life span, but it is not infinite.
