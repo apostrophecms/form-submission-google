@@ -1,6 +1,6 @@
 {
-  "name": "@apostrophecms/module-template",
-  "version": "1.0.0",
+  "name": "@apostrophecms/form-submission-google",
+  "version": "1.0.0-beta",
   "description": "A template for creating an ApostropheCMS 3 module.",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apostrophecms/module-template.git"
+    "url": "git+https://github.com/apostrophecms/form-submission-google.git"
   },
-  "homepage": "https://github.com/apostrophecms/module-template#readme",
+  "homepage": "https://github.com/apostrophecms/form-submission-google#readme",
   "author": "Apostrophe Technologies",
   "license": "MIT",
   "devDependencies": {
@@ -22,8 +22,14 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "stylelint": "^13.7.1",
-    "stylelint-config-apostrophe": "^1.0.0"
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "dependencies": {
+    "googleapis": "^88.2.0",
+    "klona": "^2.0.4",
+    "lodash.has": "^4.5.2"
+  },
+  "peerDependencies": {
+    "apostrophe": "3.x"
   }
 }
