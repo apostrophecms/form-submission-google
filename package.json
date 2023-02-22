@@ -28,8 +28,5 @@
     "googleapis": "^88.2.0",
     "klona": "^2.0.4",
     "lodash.has": "^4.5.2"
-  },
-  "peerDependencies": {
-    "apostrophe": "3.x"
   }
 }
