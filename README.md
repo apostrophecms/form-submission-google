@@ -1,9 +1,21 @@
-[![CircleCI](https://circleci.com/gh/apostrophecms/form-submission-google/tree/main.svg?style=svg)](https://circleci.com/gh/apostrophecms/form-submission-google/tree/main)
-[![Chat on Discord](https://img.shields.io/discord/517772094482677790.svg)](https://chat.apostrophecms.org)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/apostrophecms/apostrophe/main/logo.svg" alt="ApostropheCMS logo" width="80" height="80">
 
-# Apostrophe Forms Google Sheets Submission
+  <h1>Apostrophe Forms Google Sheets Submission</h1>
+  <p>
+    <a aria-label="Apostrophe logo" href="https://docs.apostrophecms.org">
+      <img src="https://img.shields.io/badge/MADE%20FOR%20ApostropheCMS-000000.svg?style=for-the-badge&logo=Apostrophe&labelColor=6516dd">
+    </a>
+    <a aria-label="Join the community on Discord" href="http://chat.apostrophecms.org">
+      <img alt="" src="https://img.shields.io/discord/517772094482677790?color=5865f2&label=Join%20the%20Discord&logo=discord&logoColor=fff&labelColor=000&style=for-the-badge&logoWidth=20">
+    </a>
+    <a aria-label="License" href="https://github.com/apostrophecms/blog/blob/main/LICENSE.md">
+      <img alt="" src="https://img.shields.io/static/v1?style=for-the-badge&labelColor=000000&label=License&message=MIT&color=3DA639">
+    </a>
+  </p>
+</div>
 
-This module adds an additional form submission option to Apostrophe Forms in Apostrophe 3. It allows website managers to configure individual forms to submit to a specific Google Docs spreadsheet.
+This module adds an additional form submission option to the Apostrophe Forms extension. It allows website managers to configure individual forms to submit to a specific Google Docs spreadsheet.
 
 ## Installation
 
