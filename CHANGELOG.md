@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+- Edits README and package description. No code changes.
+
 ## 1.0.1 - 2023-03-06
 
 * Removes `apostrophe` as a peer dependency.
