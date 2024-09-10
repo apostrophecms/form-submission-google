@@ -3,6 +3,7 @@
 ## UNRELEASED
 
 - Edits README and package description. No code changes.
+- Adds translation strings
 
 ## 1.0.1 - 2023-03-06
 
