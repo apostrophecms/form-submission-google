@@ -133,13 +133,12 @@ module.exports = {
           data[key] = data[key].join(',');
         }
 
-        data[key] = typeof data[key] === 'string' ? data[key]
+        data[key] = typeof data[key] === 'string'
+          ? data[key]
           : JSON.stringify(data[key]);
       },
       async getFirstSheet (spreadsheetId) {
-        const spreadsheet = await self.sheets.spreadsheets.get({
-          spreadsheetId: spreadsheetId
-        });
+        const spreadsheet = await self.sheets.spreadsheets.get({ spreadsheetId });
         if (!spreadsheet || !has(spreadsheet, [
           'data', 'sheets', 0, 'properties', 'title'
         ])) {
@@ -196,8 +195,7 @@ module.exports = {
       credentialsFile = `${confFolder}/credentials.json`;
     }
 
-    process.env.GOOGLE_APPLICATION_CREDENTIALS = process.env.GOOGLE_APPLICATION_CREDENTIALS ||
-      credentialsFile;
+    process.env.GOOGLE_APPLICATION_CREDENTIALS ||= credentialsFile;
 
     if (
       process.env.GOOGLE_APPLICATION_CREDENTIALS &&
